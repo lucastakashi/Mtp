@@ -1,0 +1,39 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package pessoa;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class main {
+   public static void main(String[] args) {
+    String nome;
+     int endereco;
+     int op =0;
+     int idade;
+    
+    ArrayList<Pessoa> pessoas = new ArrayList<>();
+     Scanner in = new Scanner(System.in);
+     System.out.printf("Você deseja Leitura ou gravação :")  ;
+     System.out.printf("Gravação(1)  Exclusão(2) Leitura (3) \n ");
+     op= in.nextInt();
+     
+     switch(op){
+         case 1:
+             System.out.println("Digite o seu nome:...");
+            nome= in.toString();
+       System.out.println("Digite a sua idade:... ");
+       idade= in.nextInt();
+       System.out.println("Digite seu endereço:...");
+       endereco= in.nextInt();
+       
+       Pessoa usuario = new Pessoa();
+       usuario.setNome(nome);
+       usuario.setIdade(idade);
+       usuario.setEndereço(endereco);
+       
+       pessoas.add(usuario);
+             break;
